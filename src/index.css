@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  /* Off-White Studio Color Palette */
+  --color-brand-bg: #FBFBF9;          /* Warm Milk Background */
+  --color-brand-card: #FFFFFF;        /* Crisp White Surfaces */
+  --color-brand-primary: #1C1917;     /* Deep Stone Charcoal Text */
+  --color-brand-muted: #6B6661;       /* Warm Taupe Descriptions */
+  --color-brand-accent: #1C1917;      /* Primary Structural Buttons */
+  --color-brand-accent-hover: #44403C; /* Button Hover State */
+  --color-brand-highlight: #D97706;   /* Rich Amber for Physics Hover State */
+  
+  /* Physics Register */
+  --animate-rubberband: rubberband 0.8s ease-out;
+}
+
+/* The Rubber Band Scale Keyframes */
+@keyframes rubberband {
+  0% { transform: scale3d(1, 1, 1); }
+  30% { transform: scale3d(1.25, 0.75, 1); }
+  40% { transform: scale3d(0.75, 1.25, 1); }
+  50% { transform: scale3d(1.15, 0.85, 1); }
+  65% { transform: scale3d(0.95, 1.05, 1); }
+  75% { transform: scale3d(1.05, 0.95, 1); }
+  100% { transform: scale3d(1, 1, 1); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
