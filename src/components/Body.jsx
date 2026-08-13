@@ -72,11 +72,11 @@ export default function Body() {
             {/* HERO SECTION */}
             <section className="space-y-8 max-w-4xl relative">
                 <div className='flex flex-wrap items-center gap-y-2'>
-                    <span className="text-sm font-mono uppercase tracking-widest text-brand-highlight font-semibold">
+                    <span className="text-sm ml-1 font-mono uppercase tracking-widest text-brand-highlight font-semibold">
                         Available for Opportunities
                     </span>
                     <div className="flex items-center justify-center gap-1 text-sm font-mono text-brand-muted">
-                        <IoLocationOutline className='ml-0 md:ml-4 text-base' /> Budhanilkantha, Kathmandu
+                        <IoLocationOutline className='md:ml-4 text-base' /> Budhanilkantha, Kathmandu
                     </div>
                 </div>
 
