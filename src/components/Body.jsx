@@ -88,10 +88,15 @@ export default function Body() {
                     {/* aria-hidden hides the split animated letters from screen readers */}
                     <h1
                         aria-hidden="true"
-                        className="text-7xl md:text-8xl lg:text-9xl uppercase flex flex-col tracking-tighter"
+                        className="text-7xl md:text-8xl lg:text-9xl uppercase flex flex-col"
                     >
                         {nameLines.map((line, wordIndex) => (
-                            <span key={wordIndex} className="flex flex-wrap leading-[0.85]">
+                            <span
+                                key={wordIndex}
+                                // Use tracking-tighter for solid, but normal tracking with spacing for outline
+                                className={`flex flex-wrap leading-[0.85] ${line.variant === "outline" ? "tracking-normal mx-[0.02em]" : "tracking-tighter"
+                                    }`}
+                            >
                                 {line.text.split("").map((letter, letterIndex) => (
                                     <AnimatedLetter
                                         key={`${wordIndex}-${letterIndex}`}
