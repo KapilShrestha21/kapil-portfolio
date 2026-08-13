@@ -50,19 +50,19 @@ export default function Body() {
             title: "Backend",
             icon: <HiOutlineDatabase className="text-xl text-red-600" />,
             iconBg: "bg-red-50",
-            skills: ["Python", "Django", "Django REST Framework", "Node.js", "TypeScript"]
+            skills: ["Node.js", "Express.js", "REST APIs", "JWT", "Zod"]
         },
         {
             title: "Frontend",
             icon: <FaReact className="text-xl text-blue-600" />,
             iconBg: "bg-blue-50",
-            skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "JavaScript"]
+            skills: ["React", "Next.js", "Tailwind CSS", "JavaScript", "TypeScript"]
         },
         {
             title: "Tools & Others",
             icon: <HiOutlineTerminal className="text-xl text-emerald-600" />,
             iconBg: "bg-emerald-50",
-            skills: ["Git", "PostgreSQL", "MongoDB", "REST APIs"]
+            skills: ["Git", "PostgreSQL", "MongoDB", "Postman", "GitHub"]
         }
     ];
 
