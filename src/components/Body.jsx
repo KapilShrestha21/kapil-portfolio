@@ -54,7 +54,7 @@ export default function Body() {
         },
         {
             title: "Frontend",
-            icon: <FaReact  className="text-xl text-blue-600" />,
+            icon: <FaReact className="text-xl text-blue-600" />,
             iconBg: "bg-blue-50",
             skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "JavaScript"]
         },
@@ -79,20 +79,29 @@ export default function Body() {
                         <IoLocationOutline className='md:ml-4 text-base' /> Budhanilkantha, Kathmandu
                     </div>
                 </div>
-
                 <div className="py-6 select-none relative rounded-2xl">
-                    <h1 className="text-7xl sm:text-7xl md:text-8xl lg:text-9xl uppercase flex flex-col gap-0 tracking-tighter">
+                    {/* Screen reader only text so accessibility tools read the full phrase normally */}
+                    <span className="sr-only">
+                        {nameLines.map((line) => line.text).join(" ")}
+                    </span>
+
+                    {/* aria-hidden hides the split animated letters from screen readers */}
+                    <h1
+                        aria-hidden="true"
+                        className="text-7xl md:text-8xl lg:text-9xl uppercase flex flex-col tracking-tighter"
+                    >
                         {nameLines.map((line, wordIndex) => (
-                            <div key={wordIndex} className="flex flex-wrap leading-[0.85] md:leading-[0.85]">
+                            <span key={wordIndex} className="flex flex-wrap leading-[0.85]">
                                 {line.text.split("").map((letter, letterIndex) => (
                                     <AnimatedLetter
                                         key={`${wordIndex}-${letterIndex}`}
                                         variant={line.variant}
+                                        className="hover:translate-y-2 focus:translate-y-2 active:translate-y-2 transition-transform"
                                     >
-                                        {letter}
+                                        {letter === " " ? "\u00A0" : letter}
                                     </AnimatedLetter>
                                 ))}
-                            </div>
+                            </span>
                         ))}
                     </h1>
                 </div>
