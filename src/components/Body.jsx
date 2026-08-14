@@ -44,7 +44,6 @@ export default function Body() {
         }
     ];
 
-    // Subtly colored icon backgrounds for a clean aesthetic
     const skillGroups = [
         {
             title: "Backend",
@@ -80,22 +79,24 @@ export default function Body() {
                     </div>
                 </div>
                 <div className="py-6 select-none relative rounded-2xl">
-                    {/* Screen reader only text so accessibility tools read the full phrase normally */}
+                    {/* Screen reader only text */}
                     <span className="sr-only">
                         {nameLines.map((line) => line.text).join(" ")}
                     </span>
 
-                    {/* aria-hidden hides the split animated letters from screen readers */}
+                    {/* Animated visual title */}
                     <h1
                         aria-hidden="true"
-                        className="text-7xl md:text-8xl lg:text-9xl uppercase flex flex-col"
+                        className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl uppercase flex flex-col gap-1 md:gap-0"
                     >
                         {nameLines.map((line, wordIndex) => (
                             <span
                                 key={wordIndex}
-                                // Use tracking-tighter for solid, but normal tracking with spacing for outline
-                                className={`flex flex-wrap leading-[0.85] ${line.variant === "outline" ? "tracking-normal mx-[0.02em]" : "tracking-tighter"
-                                    }`}
+                                className={`flex flex-wrap leading-[0.85] ${
+                                    line.variant === "outline" 
+                                        ? "tracking-wide md:tracking-tighter gap-x-1 md:gap-x-0" 
+                                        : "tracking-tighter"
+                                }`}
                             >
                                 {line.text.split("").map((letter, letterIndex) => (
                                     <AnimatedLetter
@@ -144,7 +145,6 @@ export default function Body() {
                             className="bg-white border border-stone-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-stone-300 transition-all duration-300"
                         >
                             <div className="flex items-center gap-3 mb-5">
-                                {/* Clean color accent on the icon */}
                                 <div className={`p-2.5 rounded-lg ${group.iconBg}`}>
                                     {group.icon}
                                 </div>
@@ -207,7 +207,6 @@ export default function Body() {
                                 </div>
                             </div>
 
-                            {/* Card Body Content Area */}
                             <div className="px-6 pb-6 flex flex-col justify-between flex-1 space-y-6">
                                 <div className="space-y-3">
                                     <h3 className="text-xl font-bold tracking-tight text-stone-900">
@@ -218,7 +217,6 @@ export default function Body() {
                                     </p>
                                 </div>
 
-                                {/* Bottom Tag Matrix with matching clean color theme */}
                                 <div className="flex flex-wrap gap-1.5 pt-2">
                                     {project.tags.map((tag, idx) => (
                                         <span
