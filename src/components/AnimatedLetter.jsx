@@ -6,19 +6,20 @@ export default function AnimatedLetter({ children, variant = "solid", className 
   const handleInteraction = () => {
     if (!isPlaying) {
       setIsPlaying(true);
+      // Resets after 0.8s matching the rubberband CSS animation duration
       setTimeout(() => setIsPlaying(false), 800);
     }
   };
 
-  // 1px border on mobile, 2px border on md screens+
-  // text-white fills the inside so overlapping internal font paths don't show through
+  // Solid fill on mobile (< md breakpoint)
+  // Outline stroke on desktop (>= md breakpoint)
   const baseStyles = variant === "solid"
     ? "text-brand-primary"
-    : "text-white [-webkit-text-stroke:1px_var(--color-brand-primary)] md:[-webkit-text-stroke:2px_var(--color-brand-primary)]";
+    : "text-brand-primary md:text-white md:[-webkit-text-stroke:2.5px_var(--color-brand-primary)]";
 
   const activeStyles = variant === "solid"
     ? "text-brand-highlight"
-    : "text-white [-webkit-text-stroke:1px_var(--color-brand-highlight)] md:[-webkit-text-stroke:2px_var(--color-brand-highlight)]";
+    : "text-brand-highlight md:text-white md:[-webkit-text-stroke:2.5px_var(--color-brand-highlight)]";
 
   return (
     <span

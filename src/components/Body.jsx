@@ -87,16 +87,12 @@ export default function Body() {
                     {/* Animated visual title */}
                     <h1
                         aria-hidden="true"
-                        className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl uppercase flex flex-col gap-1 md:gap-0"
+                        className="text-7xl sm:text-7xl md:text-8xl lg:text-9xl uppercase flex flex-col"
                     >
                         {nameLines.map((line, wordIndex) => (
                             <span
                                 key={wordIndex}
-                                className={`flex flex-wrap leading-[0.85] ${
-                                    line.variant === "outline" 
-                                        ? "tracking-wide md:tracking-tighter gap-x-1 md:gap-x-0" 
-                                        : "tracking-tighter"
-                                }`}
+                                className="flex flex-wrap leading-[0.85] tracking-tighter"
                             >
                                 {line.text.split("").map((letter, letterIndex) => (
                                     <AnimatedLetter
