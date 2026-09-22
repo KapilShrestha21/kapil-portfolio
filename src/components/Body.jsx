@@ -10,10 +10,20 @@ export default function Body() {
         { text: "KAPIL", variant: "solid" },
         { text: "SHRESTHA", variant: "outline" }
     ];
-
+    
     const projects = [
         {
             id: "01",
+            title: "EVENT BOOKING PLATFORM",
+            description: "Event Booking Platform is an end-to-end event management website where users can discover upcoming events, view real-time venue and ticket details, and instantly reserve their spots. It allows organizers to create and publish their own events with custom images, set ticket capacities, and manage attendee bookings effortlessly.",
+            tags: ["React.js", "Node.js", "Express.js", "PostgresSQL", "Zustand"],
+            codeLink: "https://github.com/KapilShrestha21/Event-Booking-Platform",
+            demoLink: "https://event-booking-platform-five.vercel.app/",
+            accentBorder: "border-t-brand-highlight",
+            tagTheme: "text-brand-highlight border-brand-highlight"
+        },
+        {
+            id: "02",
             title: "SHOES E-COMMERCE",
             description: "A full-stack e-commerce application featuring dynamic product filtering, persistent shopping cart state.",
             tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Drizzle ORM"],
@@ -23,22 +33,12 @@ export default function Body() {
             tagTheme: "text-brand-highlight border-brand-highlight"
         },
         {
-            id: "02",
+            id: "03",
             title: "MYSTERY MESSAGE",
             description: "An anonymous messaging platform designed for authentic feedback and interaction. Features real-time data handling, secure user authentication, and a minimalist interface for seamless communication.",
             tags: ["Next.js", "NextAuth", "Zod", "Tailwind CSS", "MongoDB", "TypeScript"],
             codeLink: "https://github.com/KapilShrestha21/Mystery-message-in-nextjs",
             demoLink: "https://mystery-message-in-nextjs.vercel.app/",
-            accentBorder: "border-t-brand-highlight",
-            tagTheme: "text-brand-highlight border-brand-highlight"
-        },
-        {
-            id: "03",
-            title: "MERN NOTEPAD",
-            description: "A fast, streamlined note-taking application designed for rapid capture and organization. Built with a full-stack MERN architecture, it provides a persistent, clutter-free environment for managing thoughts instantly.",
-            tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
-            codeLink: "https://github.com/KapilShrestha21/mern-notepad",
-            demoLink: "https://mern-notepad-xdh0.onrender.com/",
             accentBorder: "border-t-brand-highlight",
             tagTheme: "text-brand-highlight border-brand-highlight"
         }
@@ -55,7 +55,7 @@ export default function Body() {
             title: "Frontend",
             icon: <FaReact className="text-xl text-blue-600" />,
             iconBg: "bg-blue-50",
-            skills: ["React", "Next.js", "Tailwind CSS", "JavaScript", "TypeScript"]
+            skills: ["React", "Next.js", "Tailwind CSS", "JavaScript", "TypeScript", "Zustand"]
         },
         {
             title: "Tools & Others",

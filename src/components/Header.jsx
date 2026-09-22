@@ -6,7 +6,7 @@ export default function Header() {
       <div className="max-w-5xl mx-auto flex justify-between items-center">
         {/* Logo / Personal Brand */}
         <a href="#" className="font-mono font-bold text-lg tracking-tight text-brand-primary group">
-          dev<span className="text-brand-highlight group-hover:text-brand-primary transition">.</span>portfolio
+          KS<span className="text-brand-highlight group-hover:text-brand-primary transition">.</span>dev
         </a>
 
         {/* Navigation Links */}
