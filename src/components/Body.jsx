@@ -10,13 +10,13 @@ export default function Body() {
         { text: "KAPIL", variant: "solid" },
         { text: "SHRESTHA", variant: "outline" }
     ];
-    
+
     const projects = [
         {
             id: "01",
             title: "EVENT BOOKING PLATFORM",
             description: "Event Booking Platform is an end-to-end event management website where users can discover upcoming events, view real-time venue and ticket details, and instantly reserve their spots. It allows organizers to create and publish their own events with custom images, set ticket capacities, and manage attendee bookings effortlessly.",
-            tags: ["React.js", "Node.js", "Express.js", "PostgresSQL", "Zustand"],
+            tags: ["React.js", "Node.js", "Express.js", "PostgresSQL", "Zustand", "TanStack"],
             codeLink: "https://github.com/KapilShrestha21/Event-Booking-Platform",
             demoLink: "https://event-booking-platform-five.vercel.app/",
             accentBorder: "border-t-brand-highlight",
@@ -25,7 +25,7 @@ export default function Body() {
         {
             id: "02",
             title: "SHOES E-COMMERCE",
-            description: "A full-stack e-commerce application featuring dynamic product filtering, persistent shopping cart state.",
+            description: "Shoes E-Commerce is a modern online store web application designed for browsing, filtering, and purchasing footwear. It provides users with a fast, interactive shopping experience featuring dynamic product catalogs, detailed shoe pages, interactive size and color selectors, a real-time shopping cart, and a responsive checkout workflow.",
             tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Drizzle ORM"],
             codeLink: "https://github.com/KapilShrestha21/Shoes-ecommerce-nextjs",
             demoLink: "https://shoes-ecommerce-nextjs.vercel.app/",
@@ -185,6 +185,8 @@ export default function Body() {
                                     {project.codeLink && (
                                         <a
                                             href={project.codeLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="inline-flex items-center gap-1.5 text-stone-500 hover:text-stone-900 transition-colors p-1"
                                             aria-label="View Source Code"
                                         >
@@ -194,6 +196,8 @@ export default function Body() {
                                     {project.demoLink && (
                                         <a
                                             href={project.demoLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="inline-flex items-center gap-1.5 text-stone-500 hover:text-stone-900 transition-colors p-1"
                                             aria-label="View Live Demo"
                                         >
