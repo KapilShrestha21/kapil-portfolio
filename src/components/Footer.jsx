@@ -24,7 +24,7 @@ export default function Footer() {
             <li><a href="https://github.com/KapilShrestha21" className="hover:text-brand-primary transition">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/kapil-shrestha-0baa5433b/" className="hover:text-brand-primary transition">LinkedIn</a></li>
             <li><a href="mailto:kapilshrestha890@gmail.com" className="hover:text-brand-primary transition">Email</a></li>
-            <li><a href="" className="hover:text-brand-primary transition">kapilshrestha890@gmail.com</a></li>
+            <li><a href="" className="hover:text-brand-primary transition">kapilshrestha2001@gmail.com</a></li>
           </ul>
         </div>
 
